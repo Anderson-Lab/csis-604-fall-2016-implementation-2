@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CSIS-604-fall-2016-implementation-2 by Anderson-Lab</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>CSIS-604-fall-2016-implementation-2</h1>
+        <p>Word Count and Inverted Index</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/Anderson-Lab/csis-604-fall-2016-implementation-2" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/Anderson-Lab/csis-604-fall-2016-implementation-2/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/Anderson-Lab/csis-604-fall-2016-implementation-2/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="part-1" class="anchor" href="#part-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1</h1>
+
+<p>Using your Hadoop installation, implement the word counting algorithm using the map-reduce paradigm. You must turn in your code and also a write-up analyzing how your algorithm scales up when counting words from documents of increasing size. Compare this with a simple single threaded implementation of word counting. Here are some details of the word counting algorithm: </p>
+
+<p>A. Store text documents of radically varying sizes on your Hadoop system with 3 or more data nodes.
+B. Implement a map reduce version of an algorithm that counts that number of times each word is used in the text document. 
+C. Do the aforementioned performance tests.</p>
+
+<p>A great write-up of the word count algorithm is <a href="http://kickstarthadoop.blogspot.com/2011/04/word-count-hadoop-map-reduce-example.html">http://kickstarthadoop.blogspot.com/2011/04/word-count-hadoop-map-reduce-example.html</a>, but be warned that it uses an older version of Hadoop and may not work without changes. </p>
+
+<h1>
+<a id="part-2" class="anchor" href="#part-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2</h1>
+
+<p>Now word counting is great, but what can Hadoop used for in real practice? Well one great example is the creation of an inverse index, which is useful for all information based systems. It provides a index or map for each word in the document detailing where the occurrences of that word can be found. Again, here is a tutorial that walks you through a solution: <a href="https://lintool.github.io/Cloud9/docs/exercises/indexing.html">https://lintool.github.io/Cloud9/docs/exercises/indexing.html</a>. The usual disclaimer is applied and that is this code might not work exactly as is for your version of Hadoop. As before, submit your solution and a timing comparison between a distributed map-reduce inverted index and a single thread traditional implementation. Make sure you try with various sizes of files.</p>
+
+<h1>
+<a id="part-3" class="anchor" href="#part-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 3</h1>
+
+<p>Modify the inverted index code so that it reports the chapter number as well as the line number (docno). In other words, make the index relative to the chapter number, so the docno should now be chapterno:lineinchapter. What did you have to change in order to get this to work? Submit your solution and a write-up about how you solved this variation of the problem.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/Anderson-Lab">Anderson-Lab</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
